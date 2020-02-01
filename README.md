@@ -1,6 +1,10 @@
 # KnapsackProblem
 Knapsack Problem solved with a simple Genetic Algorithm
 
+### Problem Formulation
+
+_Given a number of items, with weights and their values, pack in as much value into the knapsack as possible so that the overall weight does not exceed the capacity of the bag. The largest sum of values is the solution._
+
 **Required**: at least C++14
 
 **Tested with**: GCC 9, Clang 9 and AppleClang 11
