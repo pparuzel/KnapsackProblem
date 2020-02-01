@@ -22,6 +22,6 @@ _Given a number of items, with weights and their values, pack in as much value i
 * Higher mutation rate slows down each iteration (insignificantly, but it does)
 * Too high mutation rate ruins the convergence effectiveness to the solution (more errors)
 * Too low mutation rate ruins the convergence accuracy to the solution (more errors)
-* Evaluating fitness with Rouelette Wheel selection based on probability fails because summing up many floating point numbers escalates precision errors
+* Evaluating fitness with Roulette Wheel selection based on probability fails because summing up many floating point numbers escalates precision errors
 * Even Kahan Summation does not help much in that case
 * Roulette Wheel selection was, thus, done with integer values to avoid precision problems

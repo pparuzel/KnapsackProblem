@@ -45,7 +45,12 @@ public:
     {
     }
 
-    void solve()
+    const Solution& solution() const
+    {
+        return solution_;
+    }
+
+    auto solve() -> decltype(solution())
     {
         vector<size_t> fitnesses(population_.size());
         // Generate the first population
@@ -90,11 +95,7 @@ public:
             // Prepare the new population for next iterations
             population_ = std::move(new_population);
         }
-    }
-
-    const Solution& solution() const
-    {
-        return solution_;
+        return solution();
     }
 
 private:
@@ -219,10 +220,9 @@ int main(int argc, char* argv[])
         6404180,  // capacity
         1000,     // population size
         1000,     // iterations
-        0.01);    // mutation rate
+        0.001);    // mutation rate
 
-    solver.solve();
-    auto result = solver.solution();
+    auto result = solver.solve();
 
     std::cout << "Current solution: " << result.fitness << ", ";
     std::cout << "Chromosome: ";
